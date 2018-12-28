@@ -1,0 +1,57 @@
+{
+  "name": "woza",
+  "version": "1.6.11",
+  "description": "dump ipa from jailbreak ios by frida",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "start": "npm run build && node lib/index.js",
+    "build": "tsc",
+    "format": "prettier --tab-width 4 --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
+    "cli": "npm run build && node lib/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/woza-lab/woza.git"
+  },
+  "keywords": [
+    "ipa",
+    "jailbreak",
+    "frida"
+  ],
+  "author": "everettjf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/woza-lab/woza/issues"
+  },
+  "homepage": "https://github.com/woza-lab/woza#readme",
+  "dependencies": {
+    "@types/node": "^10.12.15",
+    "adm-zip": "^0.4.13",
+    "easy-table": "^1.1.1",
+    "frida": "^12.2.27"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "jest": "^23.6.0",
+    "prettier": "^1.15.3",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.12.0",
+    "tslint-config-prettier": "^1.17.0",
+    "typescript": "^3.2.2"
+  },
+  "files": [
+    "lib/**/*",
+    "payload.js"
+  ],
+  "bin": {
+    "woza": "./lib/cli.js"
+  }
+}

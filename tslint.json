@@ -1,0 +1,12 @@
+{
+    "extends": ["tslint:recommended", "tslint-config-prettier"],
+    "rules": {
+        "no-console": false,
+        "no-var-requires": false,
+        "object-literal-shorthand": false,
+        "prefer-const": false,
+        "no-empty": false,
+        "object-literal-sort-keys": false,
+        "ordered-imports": false
+    }
+ }
