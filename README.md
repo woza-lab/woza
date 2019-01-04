@@ -76,9 +76,9 @@ npm run cli -- com.xxx.bundleid ~/Desktop/xxx.ipa
 
 - [frida-ios-dump](https://github.com/AloneMonkey/frida-ios-dump)
 
-## Group
+---
 
-关注订阅号`this很有趣`，回复 woza 进群反馈问题。
+欢迎关注订阅号`this很有趣`
 
 ![bukuzao](https://everettjf.github.io/images/fun.jpg)
 
